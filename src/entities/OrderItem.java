@@ -12,14 +12,12 @@ public class OrderItem {
 
 	}
 
-	
 	public OrderItem(Integer quantity, Double price, Product product) {
-		
+
 		this.quantity = quantity;
 		this.price = price;
 		this.product = product;
 	}
-
 
 	// Métodos gets e sets
 
@@ -52,14 +50,19 @@ public class OrderItem {
 	public Double subTotal() {
 		return this.quantity * this.price;
 	}
-	//Método toString 
+
+	// Método toString
 	@Override
 	public String toString() {
-		
-		return getProduct().getName() + ", $" +
-	  String.format("%.2f", price)+
-	  ", Quantity: "+ quantity + ", "+
-	  "Subtotal : $" + subTotal();
+
+		return getProduct().getName() 
+				+ ", $" 
+				+String.format("%.2f", price) 
+				+ ", Quantity: " 
+				+ quantity 
+				+ ", "
+				+ "Subtotal : $" 
+				+ subTotal();
 	}
 
 }

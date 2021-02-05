@@ -16,7 +16,7 @@ public class Order {
 	private OrderStatus status;
 	private Client client;
 	private List<OrderItem> items = new ArrayList<>();
-	
+
 	// Construtores
 
 	public Order() {
@@ -27,10 +27,10 @@ public class Order {
 		this.moment = moment;
 		this.status = status;
 		this.client = client;
-	
-	}
 
+	}
 	// Métodos gets e sets
+	
 	public Date getMoment() {
 		return moment;
 	}
@@ -54,10 +54,6 @@ public class Order {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-
-	public List<OrderItem> getIntems() {
-		return items;
-	}
 	// Métodos adicionar , remover e total
 
 	public void addItem(OrderItem item) {
@@ -75,19 +71,20 @@ public class Order {
 		}
 		return sum;
 	}
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Order moment: ");
 		sb.append(sdf.format(moment) + "\n");
-		sb.append("Order status: " );
+		sb.append("Order status: ");
 		sb.append(status + "\n");
 		sb.append("Client: ");
-		sb.append(client + "\n" );
+		sb.append(client + "\n");
 		sb.append("Order items: \n");
-		for(OrderItem i :items) {
-			sb.append(i  + "\n");
-			
+		for (OrderItem i : items) {
+			sb.append(i + "\n");
+
 		}
 		sb.append("Total price : $");
 		sb.append(String.format("%.2f", total()));

@@ -9,9 +9,7 @@ public class Client {
 	private String name;
 	private String email;
 	private Date birthDate;
-	// Construtores
-
-	
+	// Construtor
 
 	public Client(String name, String email, Date birthDate) {
 		this.name = name;
@@ -43,15 +41,13 @@ public class Client {
 	public void setBirthDate(Date birthDate) {
 		this.birthDate = birthDate;
 	}
-	//método toString
+
+	// método toString
 	@Override
 	public String toString() {
-		
-				return name + " ( "  + sdf.format(birthDate) + " ) - "
-						+ email ;
-		
+
+		return name + " ( " + sdf.format(birthDate) + " ) - " + email;
+
 	}
-	
-	
 
 }
